@@ -18,7 +18,21 @@
 *       pairs() returns []
 ****************************************************************/
 function pairs(names) {
-  // Your code goes here
+  if (Array.isArray(names) && names.length)
+  {
+    var groups =[];
+
+    for(var i = 0; i < names.length; i += 2)
+    { 
+      var rand1 = names.getRandom();
+      var rand2 = names.getRandom();
+      groups.push([rand1,rand2]);
+    }
+  }
+  else 
+  {
+    return [];
+  }
 }
 
 module.exports = pairs;
